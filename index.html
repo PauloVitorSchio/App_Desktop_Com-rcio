@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Transparência</title>
+    <link href="styles/portal.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <a>PORTAL DA TRANSPARÊNCIA</a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a>
+                    <label>Ano:</label>
+                    <select id="selectAno">
+                        <option value="2021"> 2021 </option>
+                    </select>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                    <label>Mês</label>
+                    <select id="selectMes">
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <button class="setData">DEFINIR DATA</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="tab">
+        <button class="tablinks" onclick="openContent(event, 'Deputados')">Deputados</button>
+        <button class="tablinks" onclick="openContent(event, 'Partidos')">Partidos</button>
+        <button type="button" class="botaoLimpar">INÍCIO</button>
+    </div>
+
+    <div id="Deputados" class="tabcontent">
+        <form class="pesquisa">
+            <div><input type="text" class="inputBusca" id="buscarDep" placeholder="Pesquisar por Nome..."> 
+            <button type="button" class="botaoPesquisa" id="botaoBuscarDeputado">BUSCAR</button>
+            <br><br>
+            </div>
+            <div><input list="partidos" name="partidos" class="inputBusca" id="inputFiltroPartido" placeholder="Buscar Partido...">
+            <datalist id="partidos"></datalist>
+            <button type="button" class="botaoPesquisa" id="botaoFiltrarPartido">FILTRAR</button>
+            <br><br>
+            </div>
+            </form>
+        <div id="listaDeputados"></div>
+      </div>
+      
+      <div id="Partidos" class="tabcontent">
+        <form class="pesquisa">
+            <div><input list="partidos" name="partidos" class="inputBusca" id="buscarPartido" placeholder="Buscar Partido...">
+            <datalist id="partidos">
+            </datalist>
+            <button type="button" class="botaoPesquisa" id="botaoBuscarPartido">BUSCAR</button>
+            <br><br>
+            </div>
+        </form>
+        <div id="listaPartidos"></div>
+      </div>
+
+
+
+    <script src="scripts/portal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
